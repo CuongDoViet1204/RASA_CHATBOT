@@ -21,6 +21,7 @@ Xây dựng chatbot đự đoán bệnh từ triệu chứng của người dùn
 Cài đặt môi trường ảo:
   - python -m venv venv
   - venv\Scripts\activate
+
 Để chạy được chương trình, máy cần install một số thư viện sau:
   - numpy: pip install numpy  
   - pandas: pip install pandas
