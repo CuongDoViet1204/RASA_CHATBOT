@@ -1,0 +1,143 @@
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+    - intent: greet
+    - action: action_save_cust_info_when_greet
+    - action: action_greet_user
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: action_save_cust_info_when_greet
+    - action: utter_goodbye
+
+- story: thankyou
+  steps:
+    - intent: thankyou
+    - action: action_save_cust_info_when_greet
+    - action: utter_thankyou
+
+- story: ask ability
+  steps:
+    - intent: ask_ability
+    - action: action_save_cust_info_when_greet
+    - action: action_give_ability
+
+- story: praise
+  steps:
+    - intent: praise
+    - action: action_save_cust_info_when_greet
+    - action: utter_praise
+
+- story: decry
+  steps:
+    - intent: decry
+    - action: action_save_cust_info_when_greet
+    - action: utter_dercy
+
+- story: ask name
+  steps:
+    - intent: ask_name
+    - action: action_save_cust_info_when_greet
+    - action: utter_ask_name
+
+- story: give_name
+  steps:
+    - intent: give_name
+    - action: action_save_cust_info_when_give_name
+    - action: utter_give_name
+    - action: action_give_button_start
+
+- story: give_symptom
+  steps:
+    - intent: give_symptom
+    - action: action_take_symptom
+    
+- story: give_symptom_many_time
+  steps:
+    - action: action_give_button_request
+    - intent: give_symptom
+    - action: action_take_symptom
+    - action: action_give_button_request
+    - intent: give_symptom
+    - action: action_take_symptom
+    - action: action_give_button_request
+    - intent: give_symptom
+    - action: action_take_symptom
+  
+- story: request
+  steps:
+    - intent: request
+    - action: action_give_button_request
+
+- story: prognosis
+  steps:
+    - intent: prognosis
+    - action: action_prognosis
+
+- story: history
+  steps:
+    - intent: history
+    - action: action_get_history
+# ## Chào - đưa tên - hỏi tên - hỏi chức năng - chào
+# - story: greet_give_ask_name_func_bye
+#   steps:
+#   - intent: greet
+#   - action: action_greet_user
+#   - intent: give_name
+#   - action: utter_give_name
+#   - intent: ask_name
+#   - action: utter_ask_name
+#   - intent: ask_ability
+#   - action: utter_ask_ability
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# ## Chào - hỏi tên - hỏi chức năng - chào
+# - story: greet_ask_name_func_bye 
+#   steps:
+#   - intent: greet
+#   - action: action_greet_user
+#   - intent: ask_name
+#   - action: utter_ask_name
+#   - intent: ask_ability
+#   - action: utter_ask_ability
+#   - intent: goodbye
+#   - action: utter_goodbye
+  
+# ## Chào - hỏi chức năng - chào
+# - story: greet_ask_func_bye
+#   steps:
+#   - intent: greet
+#   - action: action_greet_user
+#   - intent: ask_ability
+#   - action: utter_ask_ability
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# ## Chào - hỏi tên - chào
+# - story: greet_ask_name_bye
+#   steps:
+#   - intent: greet
+#   - action: action_greet_user
+#   - intent: ask_name
+#   - action: utter_ask_name
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# ## Hỏi tên - hỏi chức năng
+# - story: ask_name_func
+#   steps:
+#   - intent: ask_name
+#   - action: utter_ask_name
+#   - intent: ask_ability
+#   - action: utter_ask_ability
+
+# ## Cảm ơn
+# - story: tks
+#   steps:
+#   - intent: thankyou
+#   - action: utter_thankyou
+

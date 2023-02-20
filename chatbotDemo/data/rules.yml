@@ -1,0 +1,51 @@
+version: "3.1"
+
+rules:
+
+- rule: Aske the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_save_cust_info_when_greet
+  - action: utter_fallback
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: action_save_cust_info_when_greet
+    - action: utter_goodbye
+
+- rule: Say name anytime the user ask
+  steps:
+    - intent: ask_name
+    - action: action_save_cust_info_when_greet
+    - action: utter_ask_name
+
+- rule: Say func anytime the user ask
+  steps:
+    - intent: ask_ability
+    - action: action_save_cust_info_when_greet
+    - action: action_give_ability
+- rule: set slot when the user give name
+  steps:
+    - intent: give_name
+    - action: action_save_cust_info_when_give_name
+    - action: utter_give_name
+    - action: action_give_button_start
+
+- rule: action greet
+  steps:
+    - intent: greet
+    # - action: action_reset_slot
+    - action: action_save_cust_info_when_greet
+    - action: action_greet_user
+
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot

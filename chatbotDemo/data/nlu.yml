@@ -1,0 +1,372 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - hey
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - hello 
+    - chào 
+    - hi em
+    - có ai ở đây không?
+    - hế lô
+    - cứu mình với
+    - yo
+    - hey man
+    - hey yo
+    - ê
+    - này
+    - chào em
+    - cho mình hỏi chút
+    - hello em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - chào bot
+    - merci
+    - mẹt si
+    - Tôi có câu hỏi. Bạn có thể trợ giúp không?
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
+    - hẹn gặp lại bạn sau
+    - mình và bạn sẽ gặp lại sau
+    - gặp lại sau nhé
+    - bye
+    - goodbye
+    - bai
+    - bye bye
+    - bái bai
+    - gút bai
+    - hẹn bạn vào khi khác nhé
+    - mình có việc bận rồi
+    - lúc khác mình và bạn sẽ nói chuyện nhé
+    - hẹn lần khác
+    - thôi nha
+    - đi đây
+
+
+- intent: thankyou
+  examples: |
+    - cám ơn
+    - thanks
+    - thank you
+    - cảm ơn em
+    - cảm ơn em nhiều nhé
+    - cảm ơn
+    - những điều bạn nói thật có ích
+    - thanks bot
+    - great! Thanks
+    - godd job
+
+- intent: praise
+  examples: |
+    - bot giỏi quá
+    - great
+    - awsome
+    - bot làm tốt lắm
+    - ui giỏi thế
+    - bot thông minh quá
+    - bot đẹp trai đấy
+    - em đẹp lắm
+    - nghe thật tuyệt đấy
+    - cậu tuyệt vời lắm
+    - cậu làm tớ ngạc nhiên quá
+
+- intent: decry
+  examples: |
+    - quá tệ
+    - ngu ngốc
+    - chả biết gì cả
+    - bot ngốc quá
+    - ngu thật
+    - dở ghê
+    - có thế mà cũng không biết
+    - kém quá
+    - sai rồi, chán ghê
+    - chán bot quá
+    - bot nói thế sai rồi
+    - bot nên học tập thêm nhiều kiến thức
+
+- intent: ask_ability
+  examples: |
+    - em có thể làm những gì nhỉ
+    - em có chức năng gì?
+    - em giúp gì được anh không?
+    - bạn có thể  làm gì?
+    - em có thể giúp gì cho anh?
+    - bạn biết hát không ?
+    - bạn biết tư vấn khám bệnh ah?
+    - em biết làm gì?
+    - em hỗ trợ anh như thế nào?
+    - cho anh xem các chức năng của em
+
+- intent: ask_name
+  examples: |
+    - bạn tên gì
+    - tên gì
+    - chị tên gì
+    - anh tên gì
+    - tên của bạn là gì
+    - tên của chị là gì
+    - tên của anh là gì
+    - cho mình hỏi tên nhé
+    - mình muốn biết tên bạn
+    - mình muốn tiện xưng hộ hơn, cho mình biết tên nhé
+    - để tiện xưng hộ thì tên bạn là gì
+    - cho em xin tên của anh ạ
+    - cho em xin tên của chị ạ
+    - được biết tên bạn thì tốt nhỉ
+    - vui lòng cho mình biết tên nhé
+    - xin phép hỏi tên của bạn
+    - vậy thì tên bạn là gì
+    - tên bạn trong tiếng việt là gì
+    - bạn có vui lòng cho mình biết tên được không
+    - chúng ta nên biết tên nhau nhỉ?
+    - em tên là gì thế
+    - tên em là gì
+    - tên em 
+    - tên bạn 
+    - bạn tên là gì 
+    - bạn tên gì thế
+    - em tên gì
+    - xin lỗi bạn nhắn lại tên của bạn có được không?
+    - tôi có thể biết tên của bạn được không?
+
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Thắng](cust_name)
+    - [Anh](cust_sex) tên là [Cường](cust_name)
+    - [Chị](cust_sex) tên là [Hằng](cust_name)
+    - [Chị](cust_sex) là [Lê Hương](cust_name)
+    - [Em](cust_sex) là [Đỗ Việt Cường](cust_name)
+    - [Em](cust_sex) tên là [Nguyễn Trần Văn Cường](cust_name)
+    - [Chú](cust_sex) tên là [Nam](cust_name)
+    - [Chú](cust_sex) là [Nam](cust_name)
+    - [Bà](cust_sex) tên là [Trang](cust_name)
+    - [Bà](cust_sex) là [Hương](cust_name)
+    - [Bác](cust_sex) tên là [Trang](cust_name)
+    - [Bác](cust_sex) là [Long](cust_name)
+    - [Ông](cust_sex) là [Thành](cust_name)
+    - [Ông](cust_sex) tên là [Thành](cust_name)
+    - [Cô](cust_sex) là [Chi](cust_name)
+    - [Cô](cust_sex) tên là [Chi](cust_name)
+    - Tên [mình](cust_sex) là [Hiếu](cust_name)
+    - [Tớ](cust_sex) là [Linh](cust_name)
+    - Tên [ông](cust_sex) là [Phạm Nhật Vượng](cust_name)
+    - Tên [bà](cust_sex) là [Trần Thùy Trang](cust_name)
+    - Tên [ông](cust_sex) là [Thành](cust_name)
+    - [Cường](cust_name)
+    - [Việt Cường](cust_name)
+    - [Đặng Thùy Linh](cust_name)
+    - Cậu có thể gọi [tớ](cust_sex) là [Trí](cust_name)
+    - [Anh](cust_sex) [Long](cust_name)
+    - Bạn có thể gọi [mình](cust_sex) là [Thu Trang](cust_name)
+    - Cháu có thể gọi [ông](cust_sex) là [Thành](cust_name)
+    - [Mình](cust_sex) tên là [Kiên](cust_name)
+    - [anh](cust_sex) là [cường](cust_name)
+    - [chị](cust_sex) là [nhung](cust_name)
+    - [bà](cust_sex) là [thư](cust_name)
+    - [chú](cust_sex) là [thương](cust_name)
+
+- intent: request
+  examples: |
+    - Bắt đầu tư vấn chẩn đoán bệnh
+    - Tư vấn bệnh tật
+    - bạn có thể giúp tôi tư vấn bệnh được không
+    - tư vấn giúp mình với
+    - mình bị ốm
+    - mình thấy không được khỏe
+    - tư vấn
+
+- intent: prognosis
+  examples: |
+    - Nhận lời chẩn đoán
+    - chẩn đoán
+    - đoán
+    - bạn hãy chẩn đoán cho mình
+    - cháu hãy chẩn đoán cho ông
+
+- intent: history
+  examples: |
+    - Lịch sử chẩn đoán
+    - lịch sử
+    - cho tôi xem lịch sử
+    - lịch sử của tôi
+    - hãy cho tôi xem lịch sử
+    - tôi đã được chẩn đoán những bệnh gì
+    - bệnh đã được chẩn đoán
+
+- intent: give_symptom
+  examples: |
+    - Tôi cảm thấy [sốt nhẹ, ho](cust_symptom) và [rùng mình](cust_symptom)
+    - Tôi bị [đau dạ dày, ngứa](cust_symptom) và [tiêu chảy](cust_symptom)
+    - Anh có các triệu chứng [sổ mũi, loét lưỡi, ho](cust_symptom) và [đờm](cust_symptom)
+    - Triệu chứng của ông là [ho, sốt cao, mụn](cust_symptom)
+    - ô có cảm giác [khó thở, đổ mồ hôi, mất nước](cust_symptom)
+    - bà có tiền sử [quá tải chất lỏng, sưng hạch bạch huyết](cust_symptom)
+    - chị bị [tăng cân, lo lắng](cust_symptom) và [chân tay lạnh](cust_symptom)
+    - [ngứa, phát ban da, ớn lạnh, đờm, loét lưỡi](cust_symptom)
+    - [ngứa, phát ban da, phát ban nốt da, hắt hơi liên tục, rùng mình](cust_symptom) và [ớn lạnh, đau khớp, đau dạ dày, thiếu axit, loét lưỡi](cust_symptom)
+    - [lãng phí cơ bắp, nôn mửa, nóng rát, tiểu ra máu, mệt mỏi, tăng cân, lo lắng](cust_symptom) và [tay chân lạnh, tâm trạng lâng lâng, sụt cân, bồn chồn](cust_symptom)
+    - [thờ ơ, mảng ở cổ, lượng đường không đủ, ho, sốt cao](cust_symptom) và [mắt trũng sâu, khó thở, đổ mồ hôi, mất nước, khó tiêu, đau đầu, da hơi vàng, nước tiểu đậm](cust_symptom)
+    - [buồn nôn, ăn mất ngon, đau sau mắt, đau lưng, táo bón, đau bụng, tiêu chảy, sốt nhẹ, nước tiểu vàng, mắt vàng, suy gan cấp tính, quá tải chất lỏng](cust_symptom) 
+    - [sưng bụng, sưng hạch bạch huyết, phiền muộn, thị lực mờ, méo mó, đờm](cust_symptom)
+    - [viêm họng, mắt đỏ, xoang, sổ mũi, sung huyết, đau ngực, chân tay yếu, nhịp tim nhanh, đau khi đi nặng, đau hậu môn](cust_symptom) 
+    - [phân có máu, ngứa hậu môn, đau cổ, chóng mặt, chuột rút, bầm tím, béo phì, sưng chân, sưng mạch máu, mắt và mặt sưng húp](cust_symptom)
+    - [phì đại tuyến giáp, móng tay dễ gãy, sưng tứ chi, đói quá mức, bệnh tình dục, môi khô và ngứa, nói lắp, đau đầu gối, đau khớp háng, yếu cơ](cust_symptom)
+    - [cứng cơ, sưng khớp, cử động cứng, chuyển động quay, mất thăng bằng, không vững vàng, yếu một bên cơ thể, mất mùi, bàng quang khó chịu](cust_symptom)
+    - [nước tiểu có mùi hôi, liên tục buồn tiểu, đầy hơi, ngứa bên trong, bệnh thương hàn, trầm cảm, dễ cáu gắt, đau cơ, thay đổi cảm giác, mụn đỏ trên cơ thể](cust_symptom) 
+    - [đau bụng, kinh nguyệt bất thường, vùng đổi màu, chảy nước mắt, tăng khẩu vị, đa niệu, bệnh di truyền, đờm nhầy, đờm gỉ, thiếu tập trung](cust_symptom) 
+    - [rối loạn thị giác, nhận truyền máu, tiêm không vô trùng, hôn mê, chảy máu dạ dày, chướng bụng, tiền sử uống rượu, quá tải chất lỏng, máu trong đờm, nổi gân bắp chân](cust_symptom)
+    - [tức ngực, đau khi đi lại, mụn nhọt nhiều mủ, mụn đầu đen, chạy gấp, tróc da, bạc như bụi, vết lõm trên móng tay, móng tay bị viêm, mụn rộp, đau đỏ quanh mũi, lớp vỏ màu vàng chảy ra](cust_symptom)
+
+- lookup: cust_symptom
+  examples: |
+    - ngứa
+    - phát ban da
+    - phát ban nốt da
+    - hắt hơi liên tục
+    - rùng mình
+    - ớn lạnh
+    - đau khớp
+    - đau dạ dày
+    - thiếu axit
+    - loét lưỡi
+    - lãng phí cơ bắp
+    - nôn mửa
+    - nóng rát
+    - tiểu ra máu
+    - mệt mỏi
+    - tăng cân
+    - lo lắng
+    - tay chân lạnh
+    - tâm trạng lâng lâng
+    - sụt cân
+    - bồn chồn
+    - thờ ơ
+    - mảng ở cổ
+    - lượng đường không đủ
+    - ho
+    - sốt cao
+    - mắt trũng sâu
+    - khó thở
+    - đổ mồ hôi
+    - mất nước
+    - khó tiêu
+    - đau đầu
+    - da hơi vàng
+    - nước tiểu đậm
+    - buồn nôn
+    - ăn mất ngon
+    - đau sau mắt
+    - đau lưng
+    - táo bón
+    - đau bụng
+    - tiêu chảy
+    - sốt nhẹ
+    - nước tiểu vàng
+    - mắt vàng
+    - suy gan cấp tính
+    - quá tải chất lỏng
+    - sưng bụng
+    - sưng hạch bạch huyết
+    - phiền muộn
+    - thị lực mờ
+    - méo mó
+    - đờm
+    - viêm họng
+    - mắt đỏ
+    - xoang
+    - sổ mũi
+    - sung huyết
+    - đau ngực
+    - chân tay yếu
+    - nhịp tim nhanh
+    - đau khi đi nặng
+    - đau hậu môn
+    - phân có máu
+    - ngứa hậu môn
+    - đau cổ
+    - chóng mặt
+    - chuột rút
+    - bầm tím
+    - béo phì
+    - sưng chân
+    - sưng mạch máu
+    - mắt và mặt sưng húp
+    - phì đại tuyến giáp
+    - móng tay dễ gãy
+    - sưng tứ chi
+    - đói quá mức
+    - bệnh tình dục
+    - môi khô và ngứa
+    - nói lắp
+    - đau đầu gối
+    - đau khớp háng
+    - yếu cơ
+    - cứng cơ
+    - sưng khớp
+    - cử động cứng
+    - chuyển động quay
+    - mất thăng bằng
+    - không vững vàng
+    - yếu một bên cơ thể
+    - mất mùi
+    - bàng quang khó chịu
+    - nước tiểu có mùi hôi
+    - liên tục buồn tiểu
+    - đầy hơi
+    - ngứa bên trong
+    - bệnh thương hàn
+    - trầm cảm
+    - dễ cáu gắt
+    - đau cơ
+    - thay đổi cảm giác
+    - mụn đỏ trên cơ thể
+    - đau bụng
+    - kinh nguyệt bất thường
+    - vùng đổi màu
+    - chảy nước mắt
+    - tăng khẩu vị
+    - đa niệu
+    - bệnh di truyền
+    - đờm nhầy
+    - đờm gỉ
+    - thiếu tập trung
+    - rối loạn thị giác
+    - nhận truyền máu
+    - tiêm không vô trùng
+    - hôn mê
+    - chảy máu dạ dày
+    - chướng bụng
+    - tiền sử uống rượu
+    - quá tải chất lỏng
+    - máu trong đờm
+    - nổi gân bắp chân
+    - tức ngực
+    - đau khi đi lại
+    - mụn nhọt nhiều mủ
+    - mụn đầu đen
+    - chạy gấp
+    - tróc da
+    - bạc như bụi
+    - vết lõm trên móng tay
+    - móng tay bị viêm
+    - mụn rộp
+    - đau đỏ quanh mũi
+    - lớp vỏ màu vàng chảy ra

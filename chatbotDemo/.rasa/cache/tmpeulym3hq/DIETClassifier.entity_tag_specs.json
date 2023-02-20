@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-cust_name",
+      "2": "I-cust_name",
+      "3": "L-cust_name",
+      "4": "U-cust_name",
+      "5": "B-cust_sex",
+      "6": "I-cust_sex",
+      "7": "L-cust_sex",
+      "8": "U-cust_sex",
+      "9": "B-cust_symptom",
+      "10": "I-cust_symptom",
+      "11": "L-cust_symptom",
+      "12": "U-cust_symptom",
+      "13": "B-cust_symptomp",
+      "14": "I-cust_symptomp",
+      "15": "L-cust_symptomp",
+      "16": "U-cust_symptomp",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-cust_name": 1,
+      "I-cust_name": 2,
+      "L-cust_name": 3,
+      "U-cust_name": 4,
+      "B-cust_sex": 5,
+      "I-cust_sex": 6,
+      "L-cust_sex": 7,
+      "U-cust_sex": 8,
+      "B-cust_symptom": 9,
+      "I-cust_symptom": 10,
+      "L-cust_symptom": 11,
+      "U-cust_symptom": 12,
+      "B-cust_symptomp": 13,
+      "I-cust_symptomp": 14,
+      "L-cust_symptomp": 15,
+      "U-cust_symptomp": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

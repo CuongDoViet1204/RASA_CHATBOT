@@ -1,0 +1,89 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thankyou
+  - praise
+  - decry
+  - ask_ability
+  - ask_name
+  - give_name
+  - give_symptom
+  - request
+  - prognosis
+  - history
+
+entities:
+  - cust_name
+  - cust_sex
+  - bot_position
+  - cust_symptom
+
+slots:
+  cust_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: cust_name
+
+  cust_sex:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: cust_sex
+
+  bot_position:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: bot_position
+
+  cust_symptom:
+    type: list
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: cust_symptom
+
+responses:
+  utter_goodbye:
+  - text: "Tạm biệt, mong sớm gặp lại {cust_sex}!"
+  - text: "Hẹn gặp lại {cust_sex} nha ^^"
+  utter_praise:
+  - text: "Hì hì, {cust_sex} khen quá lời rồi!"
+  - text: "Cảm ơn {cust_sex} đã quá khen!"
+  utter_thankyou:
+  - text: "Không có gì đâu, giúp được {cust_sex} là niềm vui của {bot_position} mà."
+  - text: "{bot_position} luôn sẵn lòng giúp đỡ bất cứ khi nào {cust_sex} gặp khó khăn mà."
+  utter_ask_ability:
+  - text: "{bot_position} có thể từ những triệu chứng của {cust_sex} để đưa ra những loại bệnh mà {cust_sex} có thể mắc phải."
+  utter_ask_name:
+  - text: "{cust_sex} có thể gọi {bot_position} là Rasa. {bot_position} là Trợ lí ảo tư vấn chuẩn đoán bệnh."
+  utter_fallback:
+  - text: "{bot_position} xin lỗi, {bot_position} chưa hiểu ý của {cust_sex} lắm. {cust_sex} có thể nhắn lại được không?"
+  utter_give_name:
+  - text: "Xin chào {cust_sex} {cust_name}. {bot_position} có thể giúp gì cho {cust_sex}?"
+  utter_dercy:
+  - text: "Xin lỗi vì {bot_position} chưa đủ thông minh để hiểu được ý của {cust_sex} :(("
+  utter_prognosis:
+  - text: "Theo {bot_position}, có thể {cust_sex} đã mắc "
+
+actions:
+  - action_greet_user
+  - action_save_cust_info_when_give_name
+  - action_save_cust_info_when_greet
+  - action_reset_slot
+  - action_take_symptom
+  - action_give_button_start
+  - action_prognosis
+  - action_give_button_request
+  - action_get_history
+  - action_give_ability
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
