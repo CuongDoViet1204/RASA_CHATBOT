@@ -10,6 +10,9 @@ Cài đặt môi trường ảo:
   - googletrans: pip install googletrans==4.0rc1
   - frameword Rasa: pip install rasa
   
+Mở terminal chạy file setup:
+  python setup.py install
+  
 Để chạy, mở 2 terminal chạy song song, cd đến folder chatbotDemo:
   - 1 terminal chạy rasa run actions
   - khởi tạo xong server chạy rasa shell ở terminal còn lại
