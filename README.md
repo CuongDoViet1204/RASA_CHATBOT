@@ -1,4 +1,23 @@
-# RASA_CHATBOT
+# CHATBOT DỰ ĐOÁN BỆNH TỪ TRIỆU CHỨNG - RASA_CHATBOT
+Bài tập lớn học phần Nhập môn Trí tuệ nhân tạo (Cô Lê Thanh Hương).
+
+Xây dựng chatbot đự đoán bệnh từ triệu chứng của người dùng.
+
+***Thành viên nhóm:**
+- Đỗ Việt Cường 20200073
+- Nguyễn Tấn Dũng 20200103
+- Nguyễn Văn Khánh 20200322
+- Trần Quốc Nam Phi 20200459
+- Trần Quang Tiến 20200540
+
+**1. Framework và thuật toán:**
+- Ngôn ngữ: Python.
+- Framework: RASA (NLU + Core + X + Intent). Tham khảo: https://rasa.com/docs/rasa/
+- Machine Learning model: RandomForest (rừng ngẫu nhiên). Training trên tập đào tạo gồm 4920 mẫu thử với 132 triệu chứng và 41 bệnh.
+- Dataset: https://www.kaggle.com/datasets/rabisingh/symptom-checker .
+  
+**2. Cài đặt và thực thi:**
+
 Cài đặt môi trường ảo:
   - python -m venv venv
   - venv\Scripts\activate
